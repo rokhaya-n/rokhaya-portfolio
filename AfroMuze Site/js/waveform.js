@@ -12,7 +12,7 @@ const analyser = audioContext.createAnalyser();
 const bufferLength = analyser.frequencyBinCount;
 const dataArray = new Uint8Array(bufferLength);
 
-analyser.fftSize = 2048; // FFT size (frequency resolution)
+analyser.fftSize = 2048;
 audioSource.connect(analyser);
 audioSource.connect(audioContext.destination);
 
@@ -62,7 +62,7 @@ function togglePlayback() {
 document.addEventListener('click', togglePlayback);
 
 function handleSongEnd() {
-  togglePlayback(); // Toggle playback state
+  togglePlayback();
 }
 
 audioElement.addEventListener('ended', handleSongEnd);
