@@ -116,7 +116,7 @@ canvas {
   font-family: "Fascinate", system-ui;
 }
 
-.click2pause h3 {
+.nowPlayingText {
   position: absolute;
   text-align: center;
   font-family: "Fascinate", system-ui;
@@ -127,7 +127,7 @@ canvas {
   left: 5vw;
 }
 
-.click2pause img {
+.sagacitePlaying {
   position: absolute;
   align-items: center;
   width: 250px;
@@ -370,60 +370,69 @@ canvas {
   /* Homepage styling */
   .siteTitle {
     font-size: 60px;
-    left: 50vw; 
+    left: 80px; 
     width: 400px;
-    top: 5vh;
+    top: 10px;
+  }
+
+  .waveform {
+    position: absolute;
+    align-items: center;
+    top: 470px;
   }
 
   .click2play,
   .click2pause h2 {
-    left: 45vw; 
-    top: 25vh;
+    left: 40px; 
+    top: 140px;
   }
 
-  .click2pause h3 {
-    left: 0; 
-    top: 30vh; 
+  .nowPlayingText {
+    left: 125px; 
+    top: 410px; 
   }
 
-  .click2pause img {
-    width: 200px;
+  .sagacitePlaying {
+    width: 150px;
     height: auto;
-    left: 6vw; 
-    top: 5vh; 
+    left: 200px; 
+    top: 250px; 
   }
 
   /* Parigo Page Styling */
   .parigoTitle {
-    font-size: 60px;
-    left: 17vw; 
-    width: 700px;
-    top: 5vh;
+    font-size: 40px;
+    left: 80px; 
+    width: 400px;
+    top: 20px;
   }
 
   .parigoDes {
     width: 400px;
-    left: 23vw;
-    top: 27vh;
+    left: 60px;
+    top: 190px;
   }
 
   .spotify {
-    top: 100vh;
-    left: 50vw;
-    width: 600px;
+    top: 800px;
+    left: 250px;
+    width: 400px;
   }
 
   /* Mixtape Page Styling */
   .mixtapeTitle {
-    font-size: 60px;
-    left: 10vw; 
-    width: 700px;
-    top: 5vh;
+    font-size: 40px;
+    left: 80px; 
+    width: 400px;
+    top: 20px;
   }
 
   #generateMixtapeBut {
-    left: 23vw;
-    top: 27vh;
+    left: 240px;
+    top: 200px;
+    width: 200px;
+    height: 80px;
+    font-size: 25px;
   }
 
   .albumCovers {
@@ -437,19 +446,19 @@ canvas {
 
   /* Zine Page Styling */
   .zineTitle {
-    font-size: 60px;
-    left: 40vw; 
-    width: 700px;
-    top: 5vh;
+    font-size: 40px;
+    left: 80px; 
+    width: 400px;
+    top: 20px;
   }
 
   .zineCarousel {
-    top: 0vh;
-    left: 10vw;
-    width: 600px;
+    top: -70px;
+    left: 80px;
+    width: 400px;
   }
 
   .prev, .next {
-    top: 27vh;
+    top: 150px;
   }
 }
