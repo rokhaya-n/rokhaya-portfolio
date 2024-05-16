@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Afro Muze Zine</title>
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- css stylesheet -->
+  <link rel="stylesheet" href="../css/muzestyles.css"/>
+
+</head>
+<body>
+
+  <div class="zineDiv fade">
+
+    <!-- nav bar -->
+    <div class="pages">
+      <div class="homePage"><a href="../afromuze_home.html">Home</a></div>
+      <div class="parigoPage"><a href="./parigo.html">Pas Trop Parigo</a></div>
+      <div class="mixtapePage"><a href="./mixtape.html">Mixtape Generator</a></div>
+      <div class="zinePage"><a href="./zine.html">Zine</a></div>
+    </div>
+
+    <h1 class="zineTitle">Zine</h1>
+
+    <!-- zine carousel -->
+    <div class="zineCarousel">
+
+      <div class="zineSpreads fade">
+        <img src="../images/zine1.png" style="width:100%">
+      </div>
+
+      <div class="zineSpreads fade">
+        <img src="../images/zine2.png" style="width:100%">
+      </div>
+
+      <div class="zineSpreads fade">
+        <img src="../images/zine3.png" style="width:100%">
+      </div>
+
+      <!-- forward and back buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!-- slider indicator dots -->
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+  </div>
+
+  <!-- calling js function -->
+  <script src="../js/carousel.js"></script>
+
+</body>

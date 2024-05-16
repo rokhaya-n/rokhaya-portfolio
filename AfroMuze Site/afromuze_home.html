@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Afro Muze</title>
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- css stylesheet -->
+  <link rel="stylesheet" href="./css/muzestyles.css"/>
+
+</head>
+<body>
+  <div class="homeDiv fade">
+
+    <h1 class="siteTitle">Afro Muze</h1>
+
+    <!-- nav bar -->
+      <div class="pages">
+        <div class="homePage"><a href="./afromuze_home.html">Home</a></div>
+        <div class="parigoPage"><a href="./muze_elements/parigo.html">Pas Trop Parigo</a></div>
+        <div class="mixtapePage"><a href="./muze_elements/mixtape.html">Mixtape Generator</a></div>
+        <div class="zinePage"><a href="./muze_elements/zine.html">Zine</a></div>
+      </div>
+
+    <div class="waveform"> 
+      <canvas id="waveformCanvas"></canvas>
+      <script src="./js/waveform.js"></script>
+    </div>
+
+    <h2 class="click2play">Click anywhere to PLAY the music</h2>
+    <div class="click2pause">
+      <h2>Click anywhere to PAUSE the music</h2>
+      <h3 class="nowPlayingText">Now Playing</h3>
+      <img src="./album_covers/sagacite.png" class="sagacitePlaying">
+    </div>
+    
+  </div>
+
+  <!-- preload song -->
+  <audio id="audioPlayer" src="./music/sagacite.mp3"></audio>
+
+  <!-- calling js function -->
+  <script src="./js/play_pause.js"></script>
+
+</body>
+</html>

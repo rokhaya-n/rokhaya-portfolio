@@ -1,0 +1,455 @@
+/* GLOBAL STYLES */
+* {
+box-sizing: border-box;
+text-decoration: none;
+color: rgb(252, 244, 229);
+}
+
+body {
+  margin: 0;
+  background-color: #000000;
+  font-family: "Saira Extra Condensed", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+}
+
+/* Waveform Canvas */
+canvas {
+  width: 100vw; 
+  height: 200px;
+  background-color: #000000;
+  margin: 0; 
+  padding: 0;
+}
+
+
+/* Nav Buttons */
+.pages {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  z-index: 200;
+  text-decoration: none;
+}
+
+.homePage,
+.parigoPage,
+.mixtapePage,
+.zinePage {
+  padding: 0;
+  width: 600px;
+  height: 35px;
+  background-color: rgb(150, 1, 1);
+  font-family: "Fascinate", system-ui;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homePage:hover ,
+.parigoPage:hover ,
+.mixtapePage:hover ,
+.zinePage:hover {
+  background-color: rgb(1, 86, 1);
+}
+
+.active-tab {
+  color: yellow;
+}
+
+/* Homepage styling */
+.homeDiv {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.siteTitle {
+  position: absolute;
+  font-family: "Fascinate", system-ui;
+  color: red;
+  font-size: 120px;
+  z-index: 100;
+  align-items: center;
+  left: 90vh;
+  text-shadow: 10px 10px 20px rgb(117, 1, 1);;
+}
+
+.waveform {
+  position: absolute;
+  align-items: center;
+  top: 50vh;
+}
+
+.click2play {
+  position: absolute;
+  text-align: center;
+  width: 400px;
+  color: rgb(1, 133, 1);
+  top: 30vh;
+  left: 55vw;
+  font-size: 20px;
+  font-family: "Fascinate", system-ui;
+}
+
+.click2pause {
+  display: none;
+}
+
+.click2pause h2 {
+  position: absolute;
+  text-align: center;
+  width: 400px;
+  color: rgb(1, 133, 1);
+  top: 30vh;
+  left: 55vw;
+  font-size: 20px;
+  font-family: "Fascinate", system-ui;
+}
+
+.click2pause h3 {
+  position: absolute;
+  text-align: center;
+  font-family: "Fascinate", system-ui;
+  font-size: 25px;
+  width: 300px;
+  color: rgb(250, 250, 151);
+  top: 45vh;
+  left: 5vw;
+}
+
+.click2pause img {
+  position: absolute;
+  align-items: center;
+  width: 250px;
+  height: auto;
+  top: 10vh;
+  left: 7vw;
+  border-radius: 20px;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 5vh;
+  left: 10vw;
+  /* transform: translate(-50%, -50%); */
+  background-color: white;
+  border: 2px solid black;
+  padding: 20px;
+  z-index: 9999;
+}
+
+/* Parigo Page Styling */
+.parigoDiv {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin-bottom: 80vh;
+}
+
+.spotify {
+  position: absolute;
+  top: 50vh;
+  left: 100vh;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  top: 800px;
+}
+
+.parigoTitle {
+  position: absolute;
+  font-family: "Fascinate", system-ui;
+  color: red;
+  font-size: 70px;
+  z-index: 100;
+  align-items: center;
+  left: 30vw;
+  top: 5vh;
+  text-shadow: 10px 10px 20px rgb(117, 1, 1);;
+}
+
+.parigoDes {
+  position: absolute;
+  text-align: center;
+  width: 400px;
+  color: rgb(250, 250, 151);
+  top: 30vh;
+  left: 35vw;
+  font-size: 20px;
+}
+
+/* Mixtape Page Styling */
+.mixtapeDiv {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin-bottom: 85vh;
+}
+
+.albumCovers {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  align-items: center; 
+  flex-direction: row;
+  display: none; 
+  top: 50%;
+  left: 10%;
+}
+
+.albumCovers img {
+  width: 350px;
+  height: auto;
+  margin: 20px;
+}
+
+.mixtapeTitle {
+  position: absolute;
+  font-family: "Fascinate", system-ui;
+  color: red;
+  font-size: 70px;
+  z-index: 100;
+  align-items: center;
+  left: 25vw;
+  top: 5vh;
+  text-shadow: 10px 10px 20px rgb(117, 1, 1);;
+}
+
+#generateMixtapeBut {
+  position: absolute;
+  padding: 0;
+  width: 350px;
+  height: 60px;
+  background-color: rgb(209, 197, 20);
+  font-family: "Fascinate", system-ui;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(1, 80, 1);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  outline: none;
+  z-index: 100;
+  top: 30%;
+  left: 37%;
+}
+
+#generateMixtapeBut:hover {
+  background-color: rgb(148, 148, 39); 
+}
+
+.albumCovers img {
+  width: 350px;
+  height: auto;
+  margin: 20px;
+}
+
+/* Zine Page Styling */
+.zineDiv {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin-bottom: 80vh;
+}
+
+.zineTitle {
+  position: absolute;
+  font-family: "Fascinate", system-ui;
+  color: red;
+  font-size: 70px;
+  z-index: 100;
+  align-items: center;
+  left: 45vw;
+  top: 5vh;
+  text-shadow: 10px 10px 20px rgb(117, 1, 1);
+}
+
+.zineCarousel {
+  max-width: 1000px;
+  position: relative;
+  margin-top: 300px;
+  left: 18vw;
+}
+
+.zineSpreads {
+  display: none;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50vh;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.5s ease;
+  border-radius: 10px;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgb(1, 83, 1);
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: rgb(112, 0, 0);
+  border-radius: 50px;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+}
+
+.active, .dot:hover {
+  background-color: rgb(214, 197, 17);
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@keyframes fade {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+
+/* MEDIA QUERY MOBILE */
+
+@media screen and (max-width: 768px) {
+
+  /* Nav Buttons */
+  .pages {
+    flex-direction: row;
+    bottom: 0;
+    width: 100vw;
+    justify-content: space-around;
+    text-align: center;
+    position: fixed; 
+  }
+
+  .homePage,
+  .parigoPage,
+  .mixtapePage,
+  .zinePage {
+    width: 500px;
+    height: 6vh;
+    margin: 0; 
+  }
+
+  /* Homepage styling */
+  .siteTitle {
+    font-size: 60px;
+    left: 50vw; 
+    width: 400px;
+    top: 5vh;
+  }
+
+  .click2play,
+  .click2pause h2 {
+    left: 45vw; 
+    top: 25vh;
+  }
+
+  .click2pause h3 {
+    left: 0; 
+    top: 30vh; 
+  }
+
+  .click2pause img {
+    width: 200px;
+    height: auto;
+    left: 6vw; 
+    top: 5vh; 
+  }
+
+  /* Parigo Page Styling */
+  .parigoTitle {
+    font-size: 60px;
+    left: 17vw; 
+    width: 700px;
+    top: 5vh;
+  }
+
+  .parigoDes {
+    width: 400px;
+    left: 23vw;
+    top: 27vh;
+  }
+
+  .spotify {
+    top: 100vh;
+    left: 50vw;
+    width: 600px;
+  }
+
+  /* Mixtape Page Styling */
+  .mixtapeTitle {
+    font-size: 60px;
+    left: 10vw; 
+    width: 700px;
+    top: 5vh;
+  }
+
+  #generateMixtapeBut {
+    left: 23vw;
+    top: 27vh;
+  }
+
+  .albumCovers {
+    top: 45vh;
+    left: 17vw;
+  }
+
+  .albumCovers img {
+    width: 200px;
+  }
+
+  /* Zine Page Styling */
+  .zineTitle {
+    font-size: 60px;
+    left: 40vw; 
+    width: 700px;
+    top: 5vh;
+  }
+
+  .zineCarousel {
+    top: 0vh;
+    left: 10vw;
+    width: 600px;
+  }
+
+  .prev, .next {
+    top: 27vh;
+  }
+}

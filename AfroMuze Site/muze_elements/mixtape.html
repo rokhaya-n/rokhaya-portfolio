@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Afro Muze Mixtape Generator</title>
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- css stylesheet -->
+  <link rel="stylesheet" href="../css/muzestyles.css"/>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+
+</head>
+<body>
+
+  <div class="mixtapeDiv fade">
+
+    <!-- nav bar -->
+    <div class="pages">
+      <div class="homePage"><a href="../afromuze_home.html">Home</a></div>
+      <div class="parigoPage"><a href="./parigo.html">Pas Trop Parigo</a></div>
+      <div class="mixtapePage"><a href="./mixtape.html">Mixtape Generator</a></div>
+      <div class="zinePage"><a href="./zine.html">Zine</a></div>
+    </div>
+
+    <h1 class="mixtapeTitle">Mixtape Generator</h1>
+
+    <!-- preloading all the album covers 4 generator -->
+    <div class="albumCovers">
+      <div class="akwaba">
+        <img class="img01" src="../album_covers/akwaba.png"/>
+      </div>
+      <div class="appartement105">
+          <img class="img02" src="../album_covers/appartement105.png" />
+      </div>
+      <div class="ategban">
+          <img class="img03" src="../album_covers/ategban.png" />
+      </div>
+      <div class="awajaree">
+          <img class="img04" src="../album_covers/awajaree.png" />
+      </div>
+      <div class="B22">
+          <img class="img05" src="../album_covers/B22.png" />
+      </div>
+      <div class="bella">
+          <img class="img06" src="../album_covers/bella.png" />
+      </div>
+      <div class="calypso">
+          <img class="img07" src="../album_covers/calypso.png" />
+      </div>
+      <div class="conquetedutrone">
+          <img class="img08" src="../album_covers/conquetedutrone.png"/>
+      </div>
+      <div class="control">
+          <img class="img09" src="../album_covers/control.png"/>
+      </div>
+      <div class="cullinan">
+          <img class="img011" src="../album_covers/cullinan.png"/>
+      </div>
+      <div class="derniersalopards">
+          <img class="img012" src="../album_covers/derniersalopards.png"/>
+      </div>
+      <div class="dose">
+          <img class="img013" src="../album_covers/dose.png"/>
+      </div>
+      <div class="envrai">
+          <img class="img014" src="../album_covers/envrai.png"/>
+      </div>
+      <div class="fleurfroide">
+          <img class="img015" src="../album_covers/fleurfroide.png"/>
+      </div>
+      <div class="icy">
+          <img class="img016" src="../album_covers/icy.png"/>
+      </div>
+      <div class="melo">
+          <img class="img017" src="../album_covers/melo.png"/>
+      </div>
+      <div class="mhd">
+          <img class="img018" src="../album_covers/mhd.png"/>
+      </div>
+      <div class="mobali">
+          <img class="img019" src="../album_covers/mobali.png"/>
+      </div>
+      <div class="mood3">
+          <img class="img020" src="../album_covers/mood3.png"/>
+      </div>
+      <div class="nakamura">
+          <img class="img021" src="../album_covers/nakamura.png"/>
+      </div>
+      <div class="premiergaou">
+          <img class="img022" src="../album_covers/premiergaou.png"/>
+      </div>
+      <div class="ronisia">
+          <img class="img023" src="../album_covers/ronisia.png"/>
+      </div>
+      <div class="room96">
+          <img class="img024" src="../album_covers/room96.png"/>
+      </div>
+      <div class="senegalboy">
+          <img class="img025" src="../album_covers/senegalboy.png"/>
+      </div>
+      <div class="substance">
+          <img class="img026" src="../album_covers/substance.png"/>
+      </div>
+      <div class="tektek">
+          <img class="img027" src="../album_covers/tektek.png"/>
+      </div>
+      <div class="vendeursdereves">
+          <img class="img028" src="../album_covers/vendeursdereves.png"/>
+      </div>
+    </div>
+
+    <button id="generateMixtapeBut">Generate Mixtape</button>
+
+  </div>
+
+  <!-- calling js function -->
+  <script src="../js/mixtapegenerator.js"></script>
+
+</body>
